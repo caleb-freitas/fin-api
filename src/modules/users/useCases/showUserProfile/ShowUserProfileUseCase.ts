@@ -4,10 +4,10 @@ import { IUsersRepository } from "../../repositories/IUsersRepository";
 import { ShowUserProfileError } from "./ShowUserProfileError";
 
 @injectable()
-export class ShowUserProfileUseCase {
+class ShowUserProfileUseCase {
   constructor(
-    @inject('UsersRepository')
-    private usersRepository: IUsersRepository,
+    @inject("UsersRepository")
+    private usersRepository: IUsersRepository
   ) {}
 
   async execute(user_id: string) {
@@ -20,3 +20,5 @@ export class ShowUserProfileUseCase {
     return user;
   }
 }
+
+export { ShowUserProfileUseCase };
