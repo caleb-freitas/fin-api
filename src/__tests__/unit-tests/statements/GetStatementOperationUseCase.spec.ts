@@ -1,13 +1,12 @@
-import { InMemoryUsersRepository } from "../../../users/repositories/in-memory/InMemoryUsersRepository";
-import { AuthenticateUserUseCase } from "../../../users/useCases/authenticateUser/AuthenticateUserUseCase";
-import { CreateUserUseCase } from "../../../users/useCases/createUser/CreateUserUseCase";
-import { ICreateUserDTO } from "../../../users/useCases/createUser/ICreateUserDTO";
-import { OperationType } from "../../entities/Statement";
-import { InMemoryStatementsRepository } from "../../repositories/in-memory/InMemoryStatementsRepository";
-import { CreateStatementError } from "../createStatement/CreateStatementError";
-import { CreateStatementUseCase } from "../createStatement/CreateStatementUseCase";
-import { GetStatementOperationError } from "../getStatementOperation/GetStatementOperationError";
-import { GetStatementOperationUseCase } from "../getStatementOperation/GetStatementOperationUseCase";
+import { OperationType } from "../../../modules/statements/entities/Statement";
+import { InMemoryStatementsRepository } from "../../../modules/statements/repositories/in-memory/InMemoryStatementsRepository";
+import { CreateStatementUseCase } from "../../../modules/statements/useCases/createStatement/CreateStatementUseCase";
+import { GetStatementOperationError } from "../../../modules/statements/useCases/getStatementOperation/GetStatementOperationError";
+import { GetStatementOperationUseCase } from "../../../modules/statements/useCases/getStatementOperation/GetStatementOperationUseCase";
+import { InMemoryUsersRepository } from "../../../modules/users/repositories/in-memory/InMemoryUsersRepository";
+import { AuthenticateUserUseCase } from "../../../modules/users/useCases/authenticateUser/AuthenticateUserUseCase";
+import { CreateUserUseCase } from "../../../modules/users/useCases/createUser/CreateUserUseCase";
+import { ICreateUserDTO } from "../../../modules/users/useCases/createUser/ICreateUserDTO";
 
 let usersRepository: InMemoryUsersRepository;
 let statementsRepository: InMemoryStatementsRepository;

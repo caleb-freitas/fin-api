@@ -1,9 +1,9 @@
-import { InMemoryUsersRepository } from "../../repositories/in-memory/InMemoryUsersRepository";
-import { AuthenticateUserUseCase } from "../authenticateUser/AuthenticateUserUseCase";
-import { CreateUserUseCase } from "../createUser/CreateUserUseCase";
-import { ICreateUserDTO } from "../createUser/ICreateUserDTO";
-import { ShowUserProfileError } from "../showUserProfile/ShowUserProfileError";
-import { ShowUserProfileUseCase } from "../showUserProfile/ShowUserProfileUseCase";
+import { InMemoryUsersRepository } from "../../../modules/users/repositories/in-memory/InMemoryUsersRepository";
+import { AuthenticateUserUseCase } from "../../../modules/users/useCases/authenticateUser/AuthenticateUserUseCase";
+import { CreateUserUseCase } from "../../../modules/users/useCases/createUser/CreateUserUseCase";
+import { ICreateUserDTO } from "../../../modules/users/useCases/createUser/ICreateUserDTO";
+import { ShowUserProfileError } from "../../../modules/users/useCases/showUserProfile/ShowUserProfileError";
+import { ShowUserProfileUseCase } from "../../../modules/users/useCases/showUserProfile/ShowUserProfileUseCase";
 
 let usersRepository: InMemoryUsersRepository;
 let createUserUseCase: CreateUserUseCase;

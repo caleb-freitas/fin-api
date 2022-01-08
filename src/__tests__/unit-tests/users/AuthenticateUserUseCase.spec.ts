@@ -1,8 +1,8 @@
-import { InMemoryUsersRepository } from "../../repositories/in-memory/InMemoryUsersRepository";
-import { AuthenticateUserUseCase } from "../authenticateUser/AuthenticateUserUseCase";
-import { IncorrectEmailOrPasswordError } from "../authenticateUser/IncorrectEmailOrPasswordError";
-import { CreateUserUseCase } from "../createUser/CreateUserUseCase";
-import { ICreateUserDTO } from "../createUser/ICreateUserDTO";
+import { InMemoryUsersRepository } from "../../../modules/users/repositories/in-memory/InMemoryUsersRepository";
+import { AuthenticateUserUseCase } from "../../../modules/users/useCases/authenticateUser/AuthenticateUserUseCase";
+import { IncorrectEmailOrPasswordError } from "../../../modules/users/useCases/authenticateUser/IncorrectEmailOrPasswordError";
+import { CreateUserUseCase } from "../../../modules/users/useCases/createUser/CreateUserUseCase";
+import { ICreateUserDTO } from "../../../modules/users/useCases/createUser/ICreateUserDTO";
 
 let usersRepository: InMemoryUsersRepository;
 let createUserUseCase: CreateUserUseCase;
