@@ -7,7 +7,7 @@ import createConnection from "../../../database";
 
 let connection: Connection;
 
-describe("Authenticate user", () => {
+describe("Show user profile controller", () => {
   beforeAll(async () => {
     connection = await createConnection();
     await connection.runMigrations();
