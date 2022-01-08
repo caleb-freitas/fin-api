@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "ts-node-dev --transpile-only --ignore-watch node_modules --respawn ./src/server.ts",
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli",
-    "test": "jest"
+    "test": "NODE_ENV=test jest --runInBand --detectOpenHandles"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -16,6 +16,7 @@
     "jsonwebtoken": "^8.5.1",
     "pg": "^8.5.1",
     "reflect-metadata": "^0.1.13",
+    "supertest": "^6.1.6",
     "tsyringe": "^4.5.0",
     "typeorm": "^0.2.31",
     "uuid": "^8.3.2"
@@ -27,6 +28,7 @@
     "@types/jest": "^27.4.0",
     "@types/jsonwebtoken": "^8.5.1",
     "@types/node": "^14.14.35",
+    "@types/supertest": "^2.0.11",
     "@types/uuid": "^8.3.0",
     "jest": "^27.4.7",
     "ts-jest": "^27.1.2",
