@@ -86,7 +86,7 @@ describe("Get statement operation use case", () => {
         email: user.email,
         password: user.password,
       });
-      const statementOperation = await getStatementOperationUseCase.execute({
+      await getStatementOperationUseCase.execute({
         user_id: token.user.id as string,
         statement_id: "something_else",
       });

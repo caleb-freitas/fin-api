@@ -1,11 +1,11 @@
-import { InMemoryUsersRepository } from "../../../modules/users/repositories/in-memory/InMemoryUsersRepository";
-import { AuthenticateUserUseCase } from "../../../modules/users/useCases/authenticateUser/AuthenticateUserUseCase";
-import { CreateUserUseCase } from "../../../modules/users/useCases/createUser/CreateUserUseCase";
-import { ICreateUserDTO } from "../../../modules/users/useCases/createUser/ICreateUserDTO";
 import { OperationType } from "../../../modules/statements/entities/Statement";
 import { InMemoryStatementsRepository } from "../../../modules/statements/repositories/in-memory/InMemoryStatementsRepository";
 import { CreateStatementError } from "../../../modules/statements/useCases/createStatement/CreateStatementError";
 import { CreateStatementUseCase } from "../../../modules/statements/useCases/createStatement/CreateStatementUseCase";
+import { InMemoryUsersRepository } from "../../../modules/users/repositories/in-memory/InMemoryUsersRepository";
+import { AuthenticateUserUseCase } from "../../../modules/users/useCases/authenticateUser/AuthenticateUserUseCase";
+import { CreateUserUseCase } from "../../../modules/users/useCases/createUser/CreateUserUseCase";
+import { ICreateUserDTO } from "../../../modules/users/useCases/createUser/ICreateUserDTO";
 
 let usersRepository: InMemoryUsersRepository;
 let statementsRepository: InMemoryStatementsRepository;
@@ -98,7 +98,7 @@ describe("Create statement use case", () => {
         amount: 1000,
         description: "deposit_description",
       });
-      const withdraw = await createStatementUseCase.execute({
+      await createStatementUseCase.execute({
         user_id: token.user.id as string,
         type: OperationType.WITHDRAW,
         amount: 2000,
